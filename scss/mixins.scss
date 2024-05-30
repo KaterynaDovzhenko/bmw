@@ -1,0 +1,42 @@
+@mixin header-font {
+  font-family: $accent-font;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $bg-color;
+}
+
+@mixin h2 {
+  font-size: 50px;
+}
+@mixin h3 {
+  font-size: 30px;
+}
+@mixin h3-tablet {
+  font-size: 25px;
+}
+@mixin h3-mobile {
+  font-size: 20px;
+}
+
+@mixin main-font {
+  font-family: $main-font;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  color: $bg-color;
+}
+
+@mixin secondary-font {
+  font-size: 20px;
+}
+@mixin secondary-light-font {
+  font-size: 20px;
+  font-weight: 300;
+}
+@mixin secondary-light-tablet-font {
+  font-size: 15px;
+}

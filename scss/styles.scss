@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:ital@0;1&display=swap");
+@import "variables.scss";
+@import "mixins.scss";
+
+h1,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $bg-color;
+  color: $secondary-color;
+  font-family: $main-font;
+  margin: 0;
+}

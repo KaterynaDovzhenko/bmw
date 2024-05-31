@@ -1,5 +1,14 @@
+@mixin container {
+  // max-width: $breakpoint-mobile;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @mixin header-font {
   font-family: $accent-font;
+  text-align: center;
   font-size: 70px;
   font-weight: 400;
   line-height: 1.33;
@@ -39,4 +48,21 @@
 }
 @mixin secondary-light-tablet-font {
   font-size: 15px;
+}
+
+@mixin btn {
+  background-color: $accent-color;
+  padding: 10px;
+}
+
+@mixin img-container {
+  text-align: center;
+
+  .bmw-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

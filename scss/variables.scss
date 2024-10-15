@@ -1,15 +1,20 @@
 $default-color: #f1f1f1;
 $bg-color: #211e28;
 $bg-color-transparent: rgb(33, 30, 40, 0.8);
-$bg-color-section: rgba(33, 30, 40, 0.055);
+$bg-color-section: rgba(33, 30, 40, 0.296);
 $bg-section-light: rgb(107, 132, 131, 0.8);
 $accent-color: #672b38;
 $primary-color: #e5dfdb;
 $secondary-color: #5f5f66;
+$third-color: #4b4b51;
+$bg-mobile: rgba(95, 95, 102, 0.95);
+$mobile-hover: #c8c8c8;
 
 $accent-font: "Montserrat", sans-serif;
 $main-font: "Lato", sans-serif;
 
 $breakpoint-desktop: 1024px;
 $breakpoint-tablet: 768px;
-$breakpoint-mobile: 320px;
+$breakpoint-mobile: 320px; //min-width
+
+$cubic-bezier: cubic-bezier(0.22, 0.09, 0.29, 0.95);

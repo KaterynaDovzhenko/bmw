@@ -15,38 +15,75 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <!-- <nav>
-          <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href="btn">contact us</a></li>
-          </ul>
-        </nav> -->
-      </div>
+<div id="threeLines">
+  <button class="btn-nav-mobile"></button>
+</div>
+<div id="mobileMenu" class="mobile__menu">
+  <nav>
+    <ul class="mobile__list">
+       <li><a href="#home">home</a></li>
+    <li><a href="#history">history</a></li>
+    <li><a href="#features">features</a></li>
+    <li><a href="#gallery">gallery</a></li>
+    <li><a href="#faq">faq</a></li>
+     <ul class="mobile__social-media-list">
+                <li><a href=""> <svg>
+                  <use href="./img/icons.svg#icon-mail"></use>
+                </svg></a></li>
+                <li><a href=""> <svg>
+                  <use href="./img/icons.svg#icon-telegram"></use>
+                </svg></a></li>
+                <li><a href=""> <svg>
+                  <use href="./img/icons.svg#icon-phone"></use>
+                </svg></a></li>
+              </ul>
+  </ul>
+  </nav>
+</div>
+<nav class="tablet__menu">
+   <ul class="tablet__list">
+       <li><a href="#home">home</a></li>
+    <li><a href="#history">history</a></li>
+    <li><a href="#features">features</a></li>
+    <li><a href="#gallery">gallery</a></li>
+    <li><a href="#faq">faq</a></li>
+        <li><a class="btn" href="">contact us</a></li>
+  </ul>
+</nav>
     </header>
     <main>
-      <section>
+      <section id="home">
         <div class="container">
-          <h1>bmw e34</h1>
+         <div class="home__top-container">
+           <h1>bmw e34</h1>
           <p>
             Step into the world of timeless performance and unrivaled
             craftsmanship with our curated selection of BMW E34 1995 models.
           </p>
+         </div>
         </div>
         <div class="bmw-img__container">
           <picture>
             <source
-              srcset="./img/bmw@1x.webp 1x, ./img/bmw@2x.webp 2x"
+              srcset="./img/main-img@1x.webp 1x, ./img/main-img@2x.webp 2x"
               type="image/webp"
             />
             <source
-              srcset="./img/bmw@1x.jpg 1x, ./img/bmw@2x.jpg 2x"
+              srcset="./img/main-img@1x.jpg 1x, ./img/main-img@2x.jpg 2x"
               type="image/jpeg"
             />
-            <img class="bmw-img" src="./img/bmw@1x.jpg" alt="bmw e34" />
+            <img class="home__bmw-img" src="./img/main-img@1x.png" alt="bmw e34" />
+          </picture>
+           <picture class="cut-picture">
+            <source
+              srcset="./img/cut-img@1x.webp 1x, ./img/cut-img@2x.webp 2x"
+              type="image/webp"
+            />
+            <source
+              srcset="./img/cut-img@1x.jpg 1x, ./img/cut-img@2x.jpg 2x"
+              type="image/jpeg"
+            />
+            <img class="bmw-img cut-img" src="./img/cut-img@1x.png" alt="bmw e34" />
           </picture>
         </div>
         <div class="container">
@@ -58,7 +95,7 @@
           </p>
         </div>
       </section>
-      <section class="history__section">
+      <section id="history" class="history__section">
         <div class="container">
           <div class="text-history__container">
             <p>
@@ -69,22 +106,21 @@
             </p>
             <h2>history</h2>
           </div>
+        
           <picture>
             <source
-              srcset="../img/dog@1x.webp 1x, ../img/dog@2x.webp 2x"
+              srcset="./img/cut-img@1x.webp 1x, ./img/cut-img@2x.webp 2x"
               type="image/webp"
             />
             <source
-              srcset="../img/dog@1x.jpg 1x, ../img/dog@2x.jpg 2x"
+              srcset="./img/cut-img@1x.jpg 1x, ./img/cut-img@2x.jpg 2x"
               type="image/jpeg"
             />
-            <img
-              class="info__left-img"
-              src=".../img/dog@1x.jpg"
-              alt="Dog with thent"
-            />
+            <img class="history__bmw-img" src="./img/cut-img@1x.png" alt="bmw e34" />
           </picture>
-          <p>
+             <div class="history__line"></div>
+  
+          <p class="history__text">
             Renowned for its innovative engineering and cutting-edge technology,
             the BMW E34 1995 set new standards in the automotive industry. From
             its advanced suspension system to its aerodynamic design, every
@@ -93,12 +129,12 @@
           </p>
         </div>
       </section>
-      <section class="features__section">
+      <section id="features" class="features__section">
         <div class="container">
           <h2>key features</h2>
           <ul class="features__img-list">
-            <li>
-              <div class="img-features__container">
+            <li class="features__grid-item timeless-grid-item">
+              <div class="features__img-container">
                 <picture>
                   <source
                     srcset="
@@ -120,10 +156,25 @@
                     alt="bmw car timeless design"
                   />
                 </picture>
+                <div class="feature__overlay">
+                     <div class="feature__header-container">
+                  <svg class="feature__hide">
+                    <use href="./img/icons.svg#icon-time"></use>
+                  </svg>
+                  <p class="feature__hide">timeless design</p>
+                  </div>
+                  <div class="feature__dynamic-text">
+                    <p>
+                      Discover the BMW E34, a true icon of automotive history
+                      renowned for its timeless design and unparalleled
+                      craftsmanship. 
+                    </p>
+                  </div>
+                </div>
               </div>
             </li>
-            <li>
-              <div class="img-features__container">
+            <li class="features__grid-item dynamic-grid-item">
+              <div class="features__img-container">
                 <picture>
                   <source
                     srcset="./img/dynamic@1x.webp 1x, ./img/dynamic@2x.webp 2x"
@@ -139,10 +190,24 @@
                     alt="dynamic bmw car interior"
                   />
                 </picture>
+                  <div class="feature__overlay">
+                     <div class="feature__header-container">
+                  <svg class="feature__hide">
+                    <use href="./img/icons.svg#icon-dynamic"></use>
+                  </svg>
+                  <p class="feature__hide">dynamic performance</p>
+                  </div>
+                  <div class="feature__dynamic-text">
+                    <p>
+                      Experience the exhilarating prowess of the 1995 BMW E34, where every curve and acceleration embodies a symphony of power and precision. Engineered for the thrill-seeking enthusiast, this iconic model combines responsive handling with cutting-edge technology.
+                    </p>
+                  </div>
+                </div>
               </div>
+             
             </li>
-            <li>
-              <div class="img-features__container">
+            <li class="features__grid-item technology-grid-item">
+              <div class="features__img-container">
                 <picture>
                   <source
                     srcset="
@@ -164,9 +229,25 @@
                     alt="bmw car timeless design"
                   />
                 </picture>
+                  <div class="feature__overlay">
+                 <div class="feature__header-container">
+                   <svg class="feature__hide">
+                    <use href="./img/icons.svg#icon-technology"></use>
+                  </svg>
+                  <p class="feature__hide">advanced technology</p>
+                 </div>
+                  <div class="feature__dynamic-text">
+                    <p>
+                      Step into the future with the 1995 BMW E34, where cutting-edge innovation meets timeless design. 
+                    </p>
+                  </div>
+                </div>
               </div>
+               </div>
             </li>
           </ul>
+        </div>
+        <div class="container">
           <ul class="features__text-list">
             <li>
               <p>
@@ -194,115 +275,237 @@
         </div>
       </section>
       <section class="experience__section">
-        <div class="container">
-          <div class="bg__container">
-            <div class="experience__container">
-              <h1>driving experience</h1>
-              <p>
-                Behind the wheel of the BMW E34 1995, drivers were treated to a
-                symphony of power, precision, and refinement. Whether navigating
-                city streets or carving through winding roads, the E34 series
-                offered a balanced and composed driving experience that
-                instilled confidence in every turn. With its smooth
-                acceleration, precise handling, and refined ride quality, the
-                BMW E34 1995 was more than just a car—it was an extension of the
-                driver's passion for performance and luxury.
-              </p>
-            </div>
+        <div class="bg__container">
+          <div class="experience__container">
+            <h2>driving experience</h2>
+            <p>
+              Behind the wheel of the BMW E34 1995, drivers were treated to a
+              symphony of power, precision, and refinement. Whether navigating
+              city streets or carving through winding roads, the E34 series
+              offered a balanced and composed driving experience that instilled
+              confidence in every turn. With its smooth acceleration, precise
+              handling, and refined ride quality, the BMW E34 1995 was more than
+              just a car—it was an extension of the driver's passion for
+              performance and luxury.
+            </p>
           </div>
         </div>
       </section>
-      <section class="achivement__section">
+      <section class="achievement__section">
         <div class="container">
-          <ul class="achivement__list">
+          <ul class="achievement__list">
             <li>
-              <p>250k+</p>
+              <p class="achievement__number">250k+</p>
               <p>units produced</p>
             </li>
             <li>
-              <p>30+</p>
+              <p class="achievement__number">30+</p>
               <p>years since its debut</p>
             </li>
             <li>
-              <p>50k+</p>
+              <p class="achievement__number">50k+</p>
               <p>enthusiasts worldwide</p>
             </li>
           </ul>
         </div>
       </section>
-      <section class="gallery__section">
+      <section id="gallery" class="gallery__section">
         <div class="container">
-          <h1>gallery</h1>
-          <ul class="gallery-list">
-            <li></li>
-            <li></li>
-            <li></li>
+          <h2>gallery</h2>
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <picture>
+                <source
+                  srcset="
+                    ./img/black-car@1x.webp 1x,
+                    ./img/black-car@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="./img/black-car@1x.jpg 1x, ./img/black-car@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  class="gallery__img"
+                  src="./img/black-car@1x.jpg"
+                  alt="black bmw car"
+                />
+              </picture>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <source
+                  srcset="./img/blue-car@1x.webp 1x, ./img/blue-car@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./img/blue-car@1x.jpg 1x, ./img/blue-car@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  class="gallery__img"
+                  src="./img/blue-car@1x.jpg"
+                  alt="blue bmw car"
+                />
+              </picture>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <source
+                  srcset="./img/gray-car@1x.webp 1x, ./img/gray-car@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./img/gray-car@1x.jpg 1x, ./img/gray-car@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <img
+                  class="gallery__img"
+                  src="./img/gray-car@1x.jpg"
+                  alt="gray bmw car"
+                />
+              </picture>
+            </li>
           </ul>
         </div>
       </section>
       <section class="tips__section">
-        <div class="container">
-          <div class="bg-tips__container">
-            <h3>Get more tips now!</h3>
+        <div class="bg-tips__container">
+          <div class="container">
+            <div class="custom-shape">
+              <h3>Get more tips now!</h3>
             <p>
               Ensure regular maintenance, opt for quality parts and Stay
               connected with the community
             </p>
             <a class="btn" href="">contact us</a>
+            </div>
             <picture></picture>
           </div>
         </div>
       </section>
-      <section class="faq__section">
+      <section id="faq" class="faq__section">
         <div class="container">
-          <ul>
-            <li>
-              <h3></h3>
-              <p></p>
-            </li>
-            <li>
-              <h3></h3>
-              <p></p>
-            </li>
-            <li>
-              <h3></h3>
-              <p></p>
-            </li>
-            <li>
-              <h3></h3>
-              <p></p>
-            </li>
-          </ul>
+          <h2>faq</h2>
+          <div class="faq__container">
+            <ul class="faq__list">
+              <li class="faq__item">
+                <div class="faq__question" onclick="toggleFaq(this)">
+                  <h3>What is the performance like?</h3>
+                </div>
+                <div class="faq__answer">
+                  <p>
+                    The BMW E34 1995 offers exceptional performance with a range
+                    of powerful engine options. Whether you choose the
+                    inline-six or V8 engine, you can expect smooth acceleration,
+                    responsive handling, and a thrilling driving experience.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item">
+                <div class="faq__question" onclick="toggleFaq(this)">
+                  <h3>What makes the BMW E34 1995 a timeless classic?</h3>
+                </div>
+                <div class="faq__answer">
+                  <p>
+                    The BMW E34 1995 is renowned for its elegant design, exceptional build quality, and advanced engineering. Its timeless silhouette, iconic kidney grille, and luxurious interior have made it a favorite among car enthusiasts and collectors. The combination of powerful performance and reliability ensures it remains a sought-after model even decades after its release.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item">
+                <div class="faq__question" onclick="toggleFaq(this)">
+                  <h3>What engine options are available for the car?</h3>
+                </div>
+                <div class="faq__answer">
+                  <p>
+                    The BMW E34 1995 offers a range of engine options, including the reliable inline-six and the powerful V8. These engines are known for their smooth power delivery, impressive performance, and overall driving enjoyment, catering to different preferences and driving styles.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__item">
+                <div class="faq__question" onclick="toggleFaq(this)">
+                  <h3>How fuel-efficient is the BMW E34 1995?</h3>
+                </div>
+                <div class="faq__answer">
+                  <p>
+                    Fuel efficiency for the BMW E34 1995 varies depending on the engine type and driving conditions. Generally, the inline-six engines offer better fuel economy compared to the V8. With careful driving and regular maintenance, owners can achieve a balanced mix of performance and fuel efficiency.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="top-footer__container">
-        <h3>
-          Explore the elegance and exhilarating performance, where every drive
-          is a journey into automotive excellence
-        </h3>
-        <nav>
-          <ul>
-            <li><a href="">history</a></li>
-            <li><a href="">features</a></li>
-            <li><a href="">gallery</a></li>
-            <li><a href="">faq</a></li>
+      <div class="container">
+        <div class="top-footer__container">
+          <h3>
+            Explore the elegance and exhilarating performance, where every drive
+            is a journey into automotive excellence
+          </h3>
+          <nav>
+            <ul>
+              <li><a href="">history</a></li>
+              <li><a href="">features</a></li>
+              <li><a href="">gallery</a></li>
+              <li><a href="">faq</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="bottom-footer__container">
+          <ul class="contact-list">
+            <li>
+              <a class="social-media-icon" href="">
+                <svg>
+                  <use href="./img/icons.svg#icon-mail"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-media-icon" href="">
+                <svg>
+                  <use href="./img/icons.svg#icon-phone"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-media-icon" href="">
+                <svg>
+                  <use href="./img/icons.svg#icon-telegram"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
-        </nav>
-      </div>
-      <div class="bottom-footer__container">
-        <ul class="contact-list">
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
-        <ul class="social-media-list">
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-        </ul>
+          <ul class="social-media-list">
+            <li>
+              <a href="">
+                <svg>
+                  <use href="./img/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg>
+                  <use href="./img/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg>
+                  <use href="./img/icons.svg#icon-ig"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
+    <script src="./js/faq.js"></script>
+    <script src="./js/mobile-nav.js"></script>
+    <script src="./js/main-img.js"></script>
   </body>
 </html>

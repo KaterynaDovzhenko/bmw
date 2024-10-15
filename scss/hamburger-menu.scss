@@ -1,0 +1,125 @@
+header {
+  position: absolute;
+}
+
+#threeLines {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 600ms ease;
+  z-index: 2000;
+  left: 35px;
+  top: 20px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: none;
+  }
+
+  .btn-nav-mobile {
+    cursor: pointer;
+    width: 40px;
+    padding: 0;
+    height: 2px;
+    background: $bg-color;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: all 300ms ease;
+    border: 0;
+
+    &:active,
+    &:focus {
+      outline: 0;
+      border: 0;
+    }
+
+    &::after,
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      transition: all 300ms ease;
+      background: $bg-color;
+    }
+
+    &::after {
+      top: -10px;
+    }
+
+    &::before {
+      bottom: -10px;
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &.active {
+    transform: rotate(360deg);
+
+    .btn-nav-mobile {
+      background: transparent;
+
+      &:after {
+        transform: rotate(-135deg) translate(-10px, -10px) scale(1.2, 1.2);
+        background: $default-color;
+      }
+
+      &:before {
+        transform: rotate(135deg) translate(-10px, 10px) scale(1.2, 1.2);
+        background: $default-color;
+      }
+    }
+  }
+}
+
+.mobile__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: $bg-mobile;
+  transform: translateX(-100%);
+  transition: transform 300ms ease;
+  z-index: 2;
+
+  &.active {
+    transform: translateX(0);
+  }
+  nav {
+    padding-top: 80%;
+    padding-left: 35px;
+    .mobile__list {
+      li {
+        @include main-font;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+        &:nth-last-child(2) {
+          margin-bottom: 150%;
+        }
+        a {
+          color: $default-color;
+          &:hover,
+          &:focus {
+            color: $mobile-hover;
+          }
+        }
+      }
+    }
+    .mobile__social-media-list {
+      display: flex;
+      gap: 15px;
+      svg {
+        @include social-media-icon;
+        &:hover,
+        &:focus {
+          fill: $mobile-hover;
+        }
+      }
+    }
+  }
+}

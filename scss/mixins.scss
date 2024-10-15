@@ -1,9 +1,20 @@
 @mixin container {
   // max-width: $breakpoint-mobile;
+  max-width: 767px;
   padding-left: 35px;
   padding-right: 35px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: $breakpoint-tablet) {
+    max-width: 1023px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    min-width: 1024px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 @mixin header-font {
@@ -48,21 +59,38 @@
 }
 @mixin secondary-light-tablet-font {
   font-size: 15px;
+  font-weight: 300;
 }
 
 @mixin btn {
   background-color: $accent-color;
+  color: $default-color;
   padding: 10px;
+  transition: background-color 0.3s ease;
+  &:hover,
+  &:focus {
+    background-color: $bg-color;
+  }
 }
 
 @mixin img-container {
   text-align: center;
+}
 
-  .bmw-img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@mixin social-media-icon {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+  transition: fill 0.3s ease;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+@mixin transition-color {
+  &:hover,
+  &:focus {
+    color: $accent-color;
   }
 }
